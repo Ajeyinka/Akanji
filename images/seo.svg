@@ -1,0 +1,121 @@
+<svg width="351" height="432" viewBox="0 0 351 432" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SEO Growth Dashboard Illustration</title>
+  <desc id="desc">A modern SEO dashboard showing search visibility, ranking growth, keyword metrics and a magnifying glass.</desc>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="12" x2="333" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#F6F8FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="72" y1="113" x2="278" y2="331" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#596BFF"/>
+      <stop offset="1" stop-color="#7B4DFF"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6172FF" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#6172FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#25306A" flood-opacity=".14"/>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#25306A" flood-opacity=".10"/>
+    </filter>
+  </defs>
+
+  <rect width="351" height="432" rx="16" fill="url(#bg)"/>
+  <circle cx="312" cy="54" r="38" fill="#DDE4FF" opacity=".7"/>
+  <circle cx="38" cy="382" r="52" fill="#E8E5FF" opacity=".8"/>
+
+  <!-- floating SEO badges -->
+  <g filter="url(#softShadow)">
+    <rect x="18" y="74" width="58" height="58" rx="16" fill="white"/>
+    <circle cx="43" cy="99" r="10" stroke="#596BFF" stroke-width="3"/>
+    <path d="M50.5 106.5L58 114" stroke="#596BFF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M31 121H63" stroke="#DCE2FF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="282" y="295" width="51" height="51" rx="15" fill="white"/>
+    <path d="M295 327V315M306 327V307M317 327V299" stroke="#6A58FF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- main dashboard -->
+  <g filter="url(#shadow)">
+    <rect x="42" y="38" width="267" height="356" rx="18" fill="white"/>
+  </g>
+
+  <!-- browser header -->
+  <path d="M42 56C42 46.059 50.059 38 60 38H291C300.941 38 309 46.059 309 56V78H42V56Z" fill="#F7F8FC"/>
+  <circle cx="61" cy="58" r="4" fill="#FF7D7D"/>
+  <circle cx="75" cy="58" r="4" fill="#FFC866"/>
+  <circle cx="89" cy="58" r="4" fill="#65D58B"/>
+  <rect x="111" y="49" width="153" height="18" rx="9" fill="white"/>
+  <circle cx="124" cy="58" r="3" stroke="#79819A" stroke-width="1.5"/>
+  <path d="M126.5 60.5L130 64" stroke="#79819A" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="136" y="55" width="68" height="6" rx="3" fill="#E2E6F0"/>
+
+  <!-- sidebar -->
+  <rect x="42" y="78" width="54" height="316" fill="#FAFBFF"/>
+  <rect x="54" y="98" width="30" height="30" rx="10" fill="url(#accent)"/>
+  <path d="M62 116L67 111L72 115L78 107" stroke="white" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="61" cy="144" r="4" fill="#C7CEDF"/>
+  <rect x="70" y="141" width="14" height="6" rx="3" fill="#DDE2ED"/>
+  <circle cx="61" cy="165" r="4" fill="#C7CEDF"/>
+  <rect x="70" y="162" width="12" height="6" rx="3" fill="#DDE2ED"/>
+  <circle cx="61" cy="186" r="4" fill="#C7CEDF"/>
+  <rect x="70" y="183" width="15" height="6" rx="3" fill="#DDE2ED"/>
+
+  <!-- title and score -->
+  <text x="112" y="107" fill="#171B2C" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">SEO PERFORMANCE</text>
+  <text x="112" y="124" fill="#8B92A7" font-family="Arial, Helvetica, sans-serif" font-size="8">Search visibility overview</text>
+  <rect x="112" y="139" width="181" height="64" rx="14" fill="#F7F8FF"/>
+  <circle cx="145" cy="171" r="21" stroke="#E2E6F6" stroke-width="6"/>
+  <path d="M145 150A21 21 0 1 1 126.5 181" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <text x="145" y="174" text-anchor="middle" fill="#262B3D" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700">92</text>
+  <text x="177" y="163" fill="#252A3C" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700">Excellent SEO health</text>
+  <text x="177" y="180" fill="#8B92A7" font-family="Arial, Helvetica, sans-serif" font-size="8">+18 points this month</text>
+  <rect x="177" y="187" width="68" height="5" rx="2.5" fill="#E6E9F5"/>
+  <rect x="177" y="187" width="56" height="5" rx="2.5" fill="#6674FF"/>
+
+  <!-- metrics -->
+  <rect x="112" y="216" width="54" height="48" rx="11" fill="#F8F9FD"/>
+  <text x="122" y="232" fill="#949BAE" font-family="Arial, Helvetica, sans-serif" font-size="7">TRAFFIC</text>
+  <text x="122" y="249" fill="#22273A" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">+48%</text>
+  <path d="M122 256L128 251L133 254L141 246L151 248" stroke="#42BF7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="174" y="216" width="54" height="48" rx="11" fill="#F8F9FD"/>
+  <text x="184" y="232" fill="#949BAE" font-family="Arial, Helvetica, sans-serif" font-size="7">KEYWORDS</text>
+  <text x="184" y="249" fill="#22273A" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">1,284</text>
+  <rect x="184" y="255" width="28" height="4" rx="2" fill="#DDE2F1"/>
+  <rect x="184" y="255" width="21" height="4" rx="2" fill="#6674FF"/>
+
+  <rect x="236" y="216" width="57" height="48" rx="11" fill="#F8F9FD"/>
+  <text x="246" y="232" fill="#949BAE" font-family="Arial, Helvetica, sans-serif" font-size="7">RANKINGS</text>
+  <text x="246" y="249" fill="#22273A" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">Top 3</text>
+  <path d="M247 258H281" stroke="#E1E5F1" stroke-width="3" stroke-linecap="round"/>
+  <path d="M247 258H274" stroke="#7A58FF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- growth chart -->
+  <rect x="112" y="277" width="181" height="93" rx="14" fill="#FCFCFE" stroke="#EEF0F6"/>
+  <text x="124" y="295" fill="#252A3C" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700">Organic growth</text>
+  <text x="264" y="295" fill="#42BF7A" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700">+32.6%</text>
+  <path d="M124 310H281M124 328H281M124 346H281" stroke="#EEF0F6" stroke-width="1"/>
+  <path d="M124 349C138 347 145 339 157 341C170 343 176 325 188 328C200 331 207 312 220 316C233 320 243 299 255 304C267 309 273 295 281 292V358H124V349Z" fill="url(#chartFill)"/>
+  <path d="M124 349C138 347 145 339 157 341C170 343 176 325 188 328C200 331 207 312 220 316C233 320 243 299 255 304C267 309 273 295 281 292" stroke="#6473FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="281" cy="292" r="4" fill="white" stroke="#6473FF" stroke-width="3"/>
+
+  <!-- magnifier foreground -->
+  <g filter="url(#softShadow)">
+    <circle cx="263" cy="357" r="28" fill="white" stroke="#6271FF" stroke-width="8"/>
+    <path d="M283 378L303 398" stroke="#6271FF" stroke-width="11" stroke-linecap="round"/>
+    <path d="M251 359L259 351L266 356L276 344" stroke="#42BF7A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- small keyword tag -->
+  <g filter="url(#softShadow)">
+    <rect x="20" y="310" width="92" height="40" rx="12" fill="white"/>
+    <circle cx="39" cy="330" r="10" fill="#EEF1FF"/>
+    <path d="M34 330L38 334L45 325" stroke="#6171FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="55" y="327" fill="#262B3D" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700">Page 1 ranking</text>
+    <text x="55" y="339" fill="#42BF7A" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700">+12 keywords</text>
+  </g>
+</svg>
