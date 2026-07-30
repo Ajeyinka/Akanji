@@ -960,3 +960,24 @@ footer {
     transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
+
+.clents-strip {
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.strip-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.client {
+  font-size: 16px;
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  background: #f5f9ff;
+  font-family: var(--ff-code);
+  border: 1px solid white;
+  white-space: nowrap;
+}

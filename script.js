@@ -107,3 +107,50 @@ function toggleAccordion() {
 }
 
 items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+const track = document.querySelector(".strip-track");
+
+let currentX = 0;
+let targetX = 0;
+let lastScroll = window.scrollY;
+let limit = 0;
+
+function calculateLimit() {
+  // Half because the content is duplicated
+  limit = track.scrollWidth / 2;
+}
+
+calculateLimit();
+
+window.addEventListener("resize", calculateLimit);
+
+window.addEventListener("scroll", () => {
+  const delta = window.scrollY - lastScroll;
+
+  // Adjust speed
+  targetX -= delta * 0.8;
+
+  lastScroll = window.scrollY;
+});
+
+function animate() {
+  // Smooth interpolation
+  currentX += (targetX - currentX) * 0.08;
+
+  // Infinite loop
+  if (currentX <= -limit) {
+    currentX += limit;
+    targetX += limit;
+  }
+
+  if (currentX >= 0) {
+    currentX -= limit;
+    targetX -= limit;
+  }
+
+  track.style.transform = `translate3d(${currentX}px,0,0)`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();
