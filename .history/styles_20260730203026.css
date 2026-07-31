@@ -228,7 +228,6 @@ body {
 .btn-wrapper {
   margin-block: 40px;
 }
-
 .primary-btn {
   background: #3b70df;
   color: white;
@@ -245,23 +244,17 @@ body {
 
 .primary-btn svg {
   width: 14px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Only enable hover effects on devices that support hover */
-@media (hover: hover) and (pointer: fine) {
-  .primary-btn {
-    transition: background-color 0.3s ease;
-  }
+.primary-btn:hover {
+  background: var(--brand-dark);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
 
-  .primary-btn:hover {
-    background: var(--brand-dark);
-    color: white;
-  }
-
-  .primary-btn:hover svg {
-    transform: translateX(4px);
-  }
+.primary-btn:hover svg {
+  transform: translateX(4px);
 }
 
 .hero-section {
@@ -478,7 +471,7 @@ body {
 }
 
 .service-card {
-  max-width: 1000px;
+  max-width: 900px;
   margin-inline: auto;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -587,17 +580,12 @@ body {
   justify-content: space-between;
   transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-/* Hover effects only on desktop/laptops */
-@media (hover: hover) and (pointer: fine) {
-  .slider:hover .testimony-card {
-    opacity: 0.35;
-  }
-
-  .slider:hover .testimony-card:hover {
-    opacity: 1;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
+.slider:hover .testimony-card {
+  opacity: 0.35;
+}
+.slider:hover .testimony-card:hover {
+  opacity: 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .bio {
   display: flex;
@@ -929,33 +917,16 @@ footer {
   padding: 20px;
   border: 1px solid #dee9f6;
   border-radius: 20px;
-  transition:
-    filter 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-/* Desktop only */
-@media (hover: hover) and (pointer: fine) {
-  .slider:hover .work-card {
-    filter: blur(2px);
-    opacity: 0.35;
-  }
-
-  .slider:hover .work-card:hover {
-    filter: blur(0);
-    opacity: 1;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  }
+.slider:hover .work-card {
+  filter: blur(2px);
+  opacity: 0.35;
 }
-
-/* Touch devices */
-@media (hover: none) {
-  .work-card {
-    filter: none;
-    opacity: 1;
-    box-shadow: none;
-  }
+.slider:hover .work-card:hover {
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .work-label {
   display: flex;
