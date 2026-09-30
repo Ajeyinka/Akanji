@@ -938,6 +938,7 @@ footer {
 #work,
 #reviews {
   overflow-x: hidden;
+  border: 1px solid red;
 }
 
 /* Desktop only */
