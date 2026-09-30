@@ -1031,6 +1031,11 @@ footer {
   color: white;
 }
 
+.partner-cmp {
+  & .btn-wrapper {
+    margin-inline: auto;
+  }
+}
 .partner-text {
   max-width: 900px;
   text-align: center;

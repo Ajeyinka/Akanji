@@ -1027,18 +1027,17 @@ footer {
 }
 
 .dark {
-  background: var(--brand-dark);
+  background: #071937;
   color: white;
 }
-
 .partner-text {
-  max-width: 900px;
   text-align: center;
+  max-width: 900px;
   margin-inline: auto;
 
   & .eyebrow {
-    color: #ebedf5;
-  }
+    color: #3b70df;
+  
 }
 
 .partner-grid {
@@ -1059,7 +1058,7 @@ footer {
 }
 
 .partner-card img {
-  width: 48px;
+  width: 60px;
 }
 
 .partner-card h3 {

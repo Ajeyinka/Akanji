@@ -1031,9 +1031,11 @@ footer {
   color: white;
 }
 
+.partner-cmp {
+}
 .partner-text {
-  max-width: 900px;
   text-align: center;
+  max-width: 900px;
   margin-inline: auto;
 
   & .eyebrow {

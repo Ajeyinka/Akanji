@@ -1027,13 +1027,12 @@ footer {
 }
 
 .dark {
-  background: var(--brand-dark);
+  background: #071937;
   color: white;
 }
-
 .partner-text {
-  max-width: 900px;
   text-align: center;
+  max-width: 900px;
   margin-inline: auto;
 
   & .eyebrow {
