@@ -1,0 +1,1115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Why Is Everything a Rectangle? The Logic of Web Design | Made by Olayinka
+    </title>
+    <meta
+      name="description"
+      content="Why are websites built from rectangles? Explore the CSS box model, grids, responsive design, and the hidden architecture behind modern web design."
+    />
+    <meta name="author" content="Olayinka Ajelolu" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://madebyolayinka.com/blog/why-everything-is-a-rectangle/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Made by Olayinka" />
+    <meta
+      property="og:title"
+      content="Why Is Almost Everything We Make a Rectangle? The Hidden Logic Behind Web Design"
+    />
+    <meta
+      property="og:description"
+      content="Why are websites built from rectangles? Explore the CSS box model, grids, responsive design, and the hidden architecture behind modern web design."
+    />
+    <meta
+      property="og:url"
+      content="https://madebyolayinka.com/blog/why-everything-is-a-rectangle/"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Why Is Almost Everything We Make a Rectangle? The Hidden Logic Behind Web Design"
+    />
+    <meta
+      name="twitter:description"
+      content="Why are websites built from rectangles? Explore the CSS box model, grids, responsive design, and the hidden architecture behind modern web design."
+    />
+    <!-- Add og:image and twitter:image after uploading your featured image. -->
+    <!-- Update the canonical and social URLs if you choose a different page slug. -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Article-only additions; your existing blog and sidebar CSS controls the layout. */
+      .blog-post .blog-diagram {
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 24px;
+        margin: 28px 0;
+        border: 1px solid #dee9f6;
+        border-radius: 12px;
+        background: #f5f9ff;
+        color: #031324;
+        font: 13px/1.55 var(--ff-code, monospace);
+      }
+      .blog-post .blog-diagram code {
+        font: inherit;
+        white-space: pre;
+      }
+      .blog-post .blog-quote {
+        padding: 24px 28px;
+        margin: 30px 0;
+        border-left: 4px solid var(--brand-clr, #3b70df);
+        border-radius: 0 12px 12px 0;
+        background: #f5f9ff;
+      }
+      .blog-post .blog-quote p {
+        margin: 0;
+        color: #031324;
+        font-weight: 500;
+      }
+      .blog-post h2[id],
+      .blog-post h3[id] {
+        scroll-margin-top: 110px;
+      }
+      .blog-main .aside {
+        position: sticky;
+        top: 110px;
+        align-self: start;
+      }
+      @media (max-width: 768px) {
+        .blog-main .aside {
+          position: static;
+        }
+        .blog-post .blog-diagram {
+          padding: 16px;
+          font-size: 11px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "@id": "https://madebyolayinka.com/blog/why-everything-is-a-rectangle/#article",
+            "headline": "Why Is Almost Everything We Make a Rectangle? The Hidden Logic Behind Web Design",
+            "description": "Why are websites built from rectangles? Explore the CSS box model, grids, responsive design, and the hidden architecture behind modern web design.",
+            "url": "https://madebyolayinka.com/blog/why-everything-is-a-rectangle/",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://madebyolayinka.com/blog/why-everything-is-a-rectangle/"
+            },
+            "author": {
+              "@id": "https://madebyolayinka.com/#olayinka"
+            },
+            "publisher": {
+              "@id": "https://madebyolayinka.com/#business"
+            },
+            "inLanguage": "en",
+            "articleSection": "Web Design",
+            "keywords": [
+              "web design",
+              "CSS box model",
+              "CSS Grid",
+              "responsive web design",
+              "Webflow",
+              "Framer",
+              "digital architecture"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://madebyolayinka.com/#olayinka",
+            "name": "Olayinka Ajelolu",
+            "url": "https://madebyolayinka.com/"
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://madebyolayinka.com/#business",
+            "name": "Made by Olayinka",
+            "url": "https://madebyolayinka.com/",
+            "founder": {
+              "@id": "https://madebyolayinka.com/#olayinka"
+            }
+          }
+        ]
+      }
+    </script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-wrapper">
+        <a class="logo" href="/" aria-label="Made by Olayinka home"
+          ><img src="/images/avarta.svg" alt="Made by Olayinka"
+        /></a>
+        <ul class="nav-list">
+          <li><a href="/#work">Work</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/white-label.html">For Agencies</a></li>
+          <li><a href="/blog.html" aria-current="page">Blog</a></li>
+        </ul>
+        <div class="btn-wrap">
+          <a href="/contact.html" class="primary-btn"
+            >Hire me today <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <div class="btn-toggle-hold">
+          <button
+            type="button"
+            class="toggle_button"
+            id="toggle_button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bar one"></span><span class="bar two"></span
+            ><span class="bar three"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container_large">
+        <div class="padding_global">
+          <header class="blog-top">
+            <p class="eyebrow">WEB DESIGN &amp; DEVELOPMENT</p>
+            <h1 class="blog-title">
+              Why Is Almost Everything We Make a Rectangle? The Hidden Logic
+              Behind Web Design
+            </h1>
+            <p class="blog-intro">
+              Why are websites built from rectangles? Explore the CSS box model,
+              grids, responsive design, and the hidden architecture behind
+              modern web design.
+            </p>
+            <!-- Optional featured image: upload your image and add its actual path here. -->
+          </header>
+          <div class="blog-main">
+            <div class="article">
+              <article
+                class="blog-post"
+                aria-label="Why Is Almost Everything We Make a Rectangle? The Hidden Logic Behind Web Design"
+              >
+                <p>Look around you.</p>
+
+                <p>
+                  Your phone is a rectangle. Your laptop is a rectangle. Your
+                  television is a rectangle. Your door, window, table, book,
+                  notebook, keyboard, shipping box and building are all built
+                  around some variation of four straight edges and four corners.
+                </p>
+
+                <p>Even the screen you're reading this on is rectangular.</p>
+
+                <p>Then open a website.</p>
+
+                <p>
+                  You see a rectangular navigation bar. A rectangular hero
+                  section. Rectangular content containers. Rectangular cards.
+                  Rectangular images. Rectangular buttons. Rectangular forms.
+                </p>
+
+                <p>At first glance, this might seem like a coincidence.</p>
+
+                <p>It isn't.</p>
+
+                <p>
+                  There is a deeper relationship between the way humans build
+                  physical things and the way we build digital experiences. The
+                  rectangle has become one of the fundamental units of
+                  human-made environments because it is extraordinarily
+                  efficient at organizing space.
+                </p>
+
+                <p>
+                  And the web is perhaps one of the clearest examples of this.
+                </p>
+
+                <h2 id="the-rectangle-is-the-geometry-of-human-efficiency">
+                  The Rectangle Is the Geometry of Human Efficiency
+                </h2>
+
+                <p>
+                  Nature doesn't seem particularly interested in rectangles.
+                </p>
+
+                <p>
+                  Trees are irregular. Rocks are irregular. Clouds are
+                  irregular. Leaves curve. Rivers bend. Human bodies are full of
+                  curves.
+                </p>
+
+                <p>Human-made environments look very different.</p>
+
+                <p>
+                  We impose straight lines, right angles, grids and measurable
+                  dimensions onto the world because they make things easier to
+                  construct, organize and reproduce.
+                </p>
+
+                <p>
+                  A rectangle can be measured with two primary dimensions: width
+                  and height.
+                </p>
+
+                <p>It can be stacked.</p>
+
+                <p>It can be aligned.</p>
+
+                <p>It can be repeated.</p>
+
+                <p>It can fill a surface without leaving gaps.</p>
+
+                <p>That last property is particularly important.</p>
+
+                <p>Imagine trying to cover a floor with circles.</p>
+
+                <p>You can do it, but gaps appear between them.</p>
+
+                <p>Now use rectangles.</p>
+
+                <p>They fit together perfectly.</p>
+
+                <p>
+                  That same principle explains why bricks, tiles, books, boxes,
+                  screens and countless other objects tend toward rectangular
+                  forms.
+                </p>
+
+                <p>The rectangle isn't necessarily beautiful.</p>
+
+                <p>It is <strong>efficient</strong>.</p>
+
+                <h2 id="then-we-built-the-internet">
+                  Then We Built the Internet
+                </h2>
+
+                <p>
+                  When computing became visual, we brought many of these
+                  physical assumptions with us.
+                </p>
+
+                <p>Computer screens were rectangular.</p>
+
+                <p>Windows were rectangular.</p>
+
+                <p>Documents were rectangular.</p>
+
+                <p>Images were rectangular.</p>
+
+                <p>Interfaces were built inside rectangular screens.</p>
+
+                <p>
+                  The early graphical user interfaces that helped define modern
+                  computing were essentially collections of windows, menus and
+                  panels occupying rectangular regions of a screen.
+                </p>
+
+                <p>The web inherited this logic.</p>
+
+                <p>A browser gives you a rectangular viewport.</p>
+
+                <p>Inside that viewport, HTML creates elements.</p>
+
+                <p>CSS controls how those elements occupy space.</p>
+
+                <p>
+                  And underneath much of CSS is a deceptively simple concept:
+                </p>
+
+                <p><strong>the box.</strong></p>
+
+                <h2 id="the-web-is-built-on-boxes">
+                  The Web Is Built on Boxes
+                </h2>
+
+                <p>
+                  Every HTML element participates in a layout system that treats
+                  it as a box.
+                </p>
+
+                <p>Think about a simple webpage:</p>
+
+                <pre
+                  class="blog-diagram"
+                ><code class="">┌────────────────────────────────────────┐
+│                 HEADER                 │
+├────────────────────────────────────────┤
+│                                        │
+│                  HERO                  │
+│                                        │
+├────────────────────────┬───────────────┤
+│                        │               │
+│       CONTENT          │    SIDEBAR    │
+│                        │               │
+├────────────────────────┴───────────────┤
+│                 FOOTER                 │
+└────────────────────────────────────────┘
+</code></pre>
+
+                <p>This isn't merely a designer's mental model.</p>
+
+                <p>CSS has an actual <strong>box model</strong>.</p>
+
+                <p>An element can have:</p>
+
+                <ul>
+                  <li>content</li>
+                  <li>padding</li>
+                  <li>border</li>
+                  <li>margin</li>
+                </ul>
+
+                <p>Put several elements together and you have a layout.</p>
+
+                <p>Put layouts together and you have a page.</p>
+
+                <p>Put pages together and you have a website.</p>
+
+                <p>
+                  So, at a fundamental level, web development is the process of
+                  arranging boxes inside boxes.
+                </p>
+
+                <h2 id="css-made-the-rectangle-even-more-powerful">
+                  CSS Made the Rectangle Even More Powerful
+                </h2>
+
+                <p>
+                  CSS introduced increasingly sophisticated ways of controlling
+                  these boxes.
+                </p>
+
+                <p>First came traditional document flow.</p>
+
+                <p>Then came positioning.</p>
+
+                <p>Then Flexbox.</p>
+
+                <p>Then CSS Grid.</p>
+
+                <p>
+                  These systems allow developers to arrange elements along rows,
+                  columns, tracks and containers.
+                </p>
+
+                <p>Consider CSS Grid.</p>
+
+                <p>A designer might create a 12-column layout:</p>
+
+                <pre
+                  class="blog-diagram"
+                ><code class="">| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+</code></pre>
+
+                <p>A hero section might occupy six columns.</p>
+
+                <p>An image might occupy the other six.</p>
+
+                <p>A text section might span eight columns.</p>
+
+                <p>A button might sit inside a smaller container.</p>
+
+                <p>The website becomes a system of measurable relationships.</p>
+
+                <p>And that is remarkably similar to architecture.</p>
+
+                <h2 id="web-design-is-digital-architecture">
+                  Web Design Is Digital Architecture
+                </h2>
+
+                <p>A website isn't just a collection of visual elements.</p>
+
+                <p>It is a spatial system.</p>
+
+                <p>There is a hierarchy.</p>
+
+                <p>There are containers.</p>
+
+                <p>There are boundaries.</p>
+
+                <p>There are relationships between objects.</p>
+
+                <p>
+                  There are rules governing how things move when the available
+                  space changes.
+                </p>
+
+                <p>
+                  That is why concepts from architecture and graphic design
+                  translate so well into web design.
+                </p>
+
+                <p>
+                  A good web designer isn't simply deciding where to put a
+                  button.
+                </p>
+
+                <p>They're deciding how information occupies space.</p>
+
+                <p>They're deciding what belongs together.</p>
+
+                <p>They're deciding what should be visually dominant.</p>
+
+                <p>They're establishing rhythm, alignment and hierarchy.</p>
+
+                <p>
+                  The rectangle provides the underlying structure that makes
+                  those decisions possible.
+                </p>
+
+                <h2 id="responsive-design-makes-this-even-more-interesting">
+                  Responsive Design Makes This Even More Interesting
+                </h2>
+
+                <p>There is another reason rectangles dominate the web.</p>
+
+                <p>Screens change.</p>
+
+                <p>
+                  A website might be viewed on a 27-inch monitor, a laptop, a
+                  tablet or a smartphone.
+                </p>
+
+                <p>The underlying content doesn't necessarily change.</p>
+
+                <p>The available space does.</p>
+
+                <p>So the layout has to adapt.</p>
+
+                <p>Consider a desktop interface:</p>
+
+                <pre
+                  class="blog-diagram"
+                ><code class="">┌──────────────────┬──────────────────┐
+│                  │                  │
+│     CONTENT      │      IMAGE       │
+│                  │                  │
+└──────────────────┴──────────────────┘
+</code></pre>
+
+                <p>On mobile, that might become:</p>
+
+                <pre
+                  class="blog-diagram"
+                ><code class="">┌──────────────────────────────┐
+│            CONTENT           │
+├──────────────────────────────┤
+│             IMAGE            │
+└──────────────────────────────┘
+</code></pre>
+
+                <p>The rectangles haven't disappeared.</p>
+
+                <p>They have <strong>reflowed</strong>.</p>
+
+                <p>
+                  That's one of the fundamental ideas behind responsive web
+                  design.
+                </p>
+
+                <p>
+                  The system remains structured while its spatial relationships
+                  change according to the available viewport.
+                </p>
+
+                <h2 id="this-is-where-webflow-and-framer-become-interesting">
+                  This Is Where Webflow and Framer Become Interesting
+                </h2>
+
+                <p>
+                  Tools like Webflow and Framer make this underlying structure
+                  visually accessible.
+                </p>
+
+                <p>
+                  Instead of writing every piece of CSS manually, you can
+                  construct a hierarchy of containers, stacks, grids and
+                  components.
+                </p>
+
+                <p>A typical structure might look something like:</p>
+
+                <pre class="blog-diagram"><code class="">Page
+│
+├── Navigation
+│
+├── Hero
+│   ├── Container
+│   │   ├── Heading
+│   │   ├── Paragraph
+│   │   └── CTA
+│
+├── Features
+│   ├── Card
+│   ├── Card
+│   └── Card
+│
+└── Footer
+</code></pre>
+
+                <p>
+                  Underneath the visual interface is still a collection of
+                  boxes.
+                </p>
+
+                <p>
+                  The sophistication comes from how those boxes relate to one
+                  another.
+                </p>
+
+                <p>
+                  This is why a well-built website can feel simple even when the
+                  underlying system is quite complex.
+                </p>
+
+                <p>The user sees simplicity.</p>
+
+                <p>The developer sees structure.</p>
+
+                <h2
+                  id="but-if-everything-is-a-rectangle-why-don-t-good-websites-look-boring"
+                >
+                  But If Everything Is a Rectangle, Why Don't Good Websites Look
+                  Boring?
+                </h2>
+
+                <p>This is where design gets interesting.</p>
+
+                <p>
+                  The underlying structure doesn't have to determine the final
+                  visual appearance.
+                </p>
+
+                <p>A rectangle can be transformed.</p>
+
+                <p>Its corners can become rounded.</p>
+
+                <p>Its background can be clipped.</p>
+
+                <p>An image can be masked into a circle.</p>
+
+                <p>An element can overlap another.</p>
+
+                <p>A section can use a curved SVG.</p>
+
+                <p>A card can rotate slightly.</p>
+
+                <p>A heading can break outside its container.</p>
+
+                <p>A shape can move independently using animation.</p>
+
+                <p>The underlying layout might still be rectangular.</p>
+
+                <p>The visual language doesn't have to be.</p>
+
+                <p>Consider a simple card.</p>
+
+                <p>Structurally:</p>
+
+                <pre
+                  class="blog-diagram"
+                ><code class="">┌────────────────────────┐
+│                        │
+│        CONTENT         │
+│                        │
+└────────────────────────┘
+</code></pre>
+
+                <p>Visually:</p>
+
+                <pre
+                  class="blog-diagram"
+                ><code class="">      ╭──────────────────╮
+    ╭─╯                  ╰─╮
+    │       CONTENT        │
+    ╰─╮                  ╭─╯
+      ╰──────────────────╯
+</code></pre>
+
+                <p>The browser still understands a box.</p>
+
+                <p>The user experiences a shape.</p>
+
+                <p>That distinction is incredibly useful.</p>
+
+                <h2 id="the-best-interfaces-often-have-structured-chaos">
+                  The Best Interfaces Often Have Structured Chaos
+                </h2>
+
+                <p>
+                  Some of the most interesting websites deliberately break the
+                  visual grid.
+                </p>
+
+                <p>Large typography overlaps images.</p>
+
+                <p>Images extend outside containers.</p>
+
+                <p>Cards collide with one another.</p>
+
+                <p>Elements appear asymmetrical.</p>
+
+                <p>Sections use unusual shapes.</p>
+
+                <p>Animations create movement across the page.</p>
+
+                <p>
+                  But beneath all of that apparent chaos is usually an extremely
+                  disciplined system.
+                </p>
+
+                <p>That's the paradox.</p>
+
+                <p>
+                  <strong
+                    >Good visual freedom often requires strong structural
+                    constraints.</strong
+                  >
+                </p>
+
+                <p>
+                  Without a layout system, breaking the grid can quickly become
+                  messy.
+                </p>
+
+                <p>
+                  With a strong grid, breaking the grid can become a deliberate
+                  design decision.
+                </p>
+
+                <h2 id="the-rectangle-is-the-invisible-skeleton">
+                  The Rectangle Is the Invisible Skeleton
+                </h2>
+
+                <p>Think of a human body.</p>
+
+                <p>You don't look at someone and think about their skeleton.</p>
+
+                <p>
+                  But the skeleton provides the structure that allows the body
+                  to exist.
+                </p>
+
+                <p>Websites work similarly.</p>
+
+                <p>The visible design might contain:</p>
+
+                <ul>
+                  <li>organic shapes</li>
+                  <li>gradients</li>
+                  <li>animations</li>
+                  <li>oversized typography</li>
+                  <li>illustrations</li>
+                  <li>video</li>
+                  <li>curved sections</li>
+                  <li>overlapping elements</li>
+                </ul>
+
+                <p>
+                  But underneath it all are containers, dimensions, spacing and
+                  alignment.
+                </p>
+
+                <p>The rectangles are the skeleton.</p>
+
+                <p>The visual design is the skin.</p>
+
+                <p>The interaction is the movement.</p>
+
+                <p>The content is the personality.</p>
+
+                <h2 id="there-is-also-a-psychological-reason">
+                  There Is Also a Psychological Reason
+                </h2>
+
+                <p>Humans are comfortable with predictable structures.</p>
+
+                <p>A straight edge tells us where something begins and ends.</p>
+
+                <p>A container tells us what belongs together.</p>
+
+                <p>A grid creates order.</p>
+
+                <p>Consistent spacing creates rhythm.</p>
+
+                <p>Alignment creates relationships.</p>
+
+                <p>
+                  This matters particularly on websites because users aren't
+                  visiting a page simply to admire it.
+                </p>
+
+                <p>They're trying to understand something.</p>
+
+                <p>They might be trying to:</p>
+
+                <ul>
+                  <li>find information</li>
+                  <li>purchase something</li>
+                  <li>submit a form</li>
+                  <li>read an article</li>
+                  <li>compare products</li>
+                  <li>book a service</li>
+                  <li>contact a company</li>
+                </ul>
+
+                <p>
+                  Structure reduces the mental effort required to accomplish
+                  those tasks.
+                </p>
+
+                <p>This is why visual hierarchy matters so much in UX.</p>
+
+                <p>The goal isn't to eliminate complexity.</p>
+
+                <p>It's to organize complexity.</p>
+
+                <h2 id="the-problem-with-too-many-rectangles">
+                  The Problem With Too Many Rectangles
+                </h2>
+
+                <p>There is a downside.</p>
+
+                <p>
+                  When designers rely too heavily on cards, containers and
+                  grids, websites can start looking identical.
+                </p>
+
+                <p>Everything becomes:</p>
+
+                <p>
+                  <strong
+                    >Heading → paragraph → button → three cards → testimonial →
+                    CTA.</strong
+                  >
+                </p>
+
+                <p>The design is technically clean but visually forgettable.</p>
+
+                <p>
+                  This is where modern web design has increasingly explored more
+                  expressive layouts.
+                </p>
+
+                <p>Instead of asking:</p>
+
+                <blockquote class="blog-quote">
+                  <p>"How do I arrange these boxes?"</p>
+                </blockquote>
+
+                <p>Designers can ask:</p>
+
+                <blockquote class="blog-quote">
+                  <p>
+                    "What should the user experience when they move through this
+                    page?"
+                  </p>
+                </blockquote>
+
+                <p>
+                  The rectangle remains useful, but it stops being the entire
+                  design language.
+                </p>
+
+                <h2 id="structure-should-serve-the-experience">
+                  Structure Should Serve the Experience
+                </h2>
+
+                <p>This is perhaps the most important lesson.</p>
+
+                <p>Rectangles aren't inherently good design.</p>
+
+                <p>They are simply an excellent structural tool.</p>
+
+                <p>
+                  A website shouldn't use a rectangular card because "websites
+                  use cards."
+                </p>
+
+                <p>
+                  It should use a card because the content benefits from being
+                  grouped and visually separated.
+                </p>
+
+                <p>A grid shouldn't exist because grids are fashionable.</p>
+
+                <p>
+                  It should exist because alignment and relationships help the
+                  user understand the information.
+                </p>
+
+                <p>A container shouldn't be arbitrarily narrow.</p>
+
+                <p>Its width should support readability and hierarchy.</p>
+
+                <p>
+                  Good web development is not about creating as many containers
+                  as possible.
+                </p>
+
+                <p>
+                  It is about creating
+                  <strong>meaningful relationships between elements</strong>.
+                </p>
+
+                <h2 id="from-physical-architecture-to-digital-architecture">
+                  From Physical Architecture to Digital Architecture
+                </h2>
+
+                <p>There is a fascinating continuity here.</p>
+
+                <p>
+                  Humans learned to build physical environments using geometry.
+                </p>
+
+                <p>
+                  We developed grids, measurements, modules and standardized
+                  dimensions.
+                </p>
+
+                <p>Then we built computers.</p>
+
+                <p>Computers gave us graphical interfaces.</p>
+
+                <p>Then we built the web.</p>
+
+                <p>
+                  The web inherited the logic of physical space but transformed
+                  it into something digital.
+                </p>
+
+                <p>We no longer need bricks.</p>
+
+                <p>We use divs.</p>
+
+                <p>We no longer need physical grids.</p>
+
+                <p>We use CSS Grid.</p>
+
+                <p>We no longer need physical stacks.</p>
+
+                <p>We use Flexbox.</p>
+
+                <p>
+                  We no longer need to physically reshape an object to fit a new
+                  environment.
+                </p>
+
+                <p>Responsive CSS can rearrange it automatically.</p>
+
+                <p>The materials changed.</p>
+
+                <p>The underlying obsession with structure remained.</p>
+
+                <h2 id="the-future-of-web-design-may-be-less-rectangular">
+                  The Future of Web Design May Be Less Rectangular
+                </h2>
+
+                <p>
+                  As browsers become more capable, designers have more freedom
+                  to move beyond traditional rectangular interfaces.
+                </p>
+
+                <p>CSS now gives developers tools for:</p>
+
+                <ul>
+                  <li>advanced clipping</li>
+                  <li>masks</li>
+                  <li>custom shapes</li>
+                  <li>gradients</li>
+                  <li>transforms</li>
+                  <li>scroll-driven animation</li>
+                  <li>motion</li>
+                  <li>blending</li>
+                  <li>responsive typography</li>
+                  <li>container queries</li>
+                  <li>sophisticated grid systems</li>
+                </ul>
+
+                <p>
+                  Websites can feel increasingly physical, spatial and organic.
+                </p>
+
+                <p>Yet the rectangle probably isn't going anywhere.</p>
+
+                <p>
+                  Because underneath all the visual experimentation, the browser
+                  still needs a system for calculating where things exist and
+                  how they relate to one another.
+                </p>
+
+                <p>
+                  The future of web design may not be about abandoning
+                  rectangles.
+                </p>
+
+                <p>It may be about <strong>hiding them better</strong>.</p>
+
+                <h2 id="the-bigger-idea">The Bigger Idea</h2>
+
+                <p>
+                  Almost everything humans build becomes rectangular because
+                  rectangles give us something nature rarely gives us:
+                </p>
+
+                <p><strong>predictable structure.</strong></p>
+
+                <p>They are easy to measure.</p>
+
+                <p>Easy to manufacture.</p>
+
+                <p>Easy to stack.</p>
+
+                <p>Easy to reproduce.</p>
+
+                <p>Easy to organize.</p>
+
+                <p>Easy to understand.</p>
+
+                <p>
+                  The web took that same principle and turned it into a digital
+                  architecture.
+                </p>
+
+                <p>
+                  Every button, section, card, image and container participates
+                  in a spatial system.
+                </p>
+
+                <p>
+                  And yet the best websites don't necessarily look like
+                  collections of boxes.
+                </p>
+
+                <p>
+                  They use the rectangle as a foundation and then deliberately
+                  break, bend, overlap and animate that foundation to create
+                  something more expressive.
+                </p>
+
+                <p>
+                  That's the real relationship between rectangles and web
+                  development:
+                </p>
+
+                <blockquote class="blog-quote">
+                  <p>
+                    <strong
+                      >The rectangle is not the design. It is the structure that
+                      makes the design possible.</strong
+                    >
+                  </p>
+                </blockquote>
+
+                <p>
+                  Once you understand that, web development starts to look less
+                  like placing elements on a screen and more like architecture.
+                </p>
+
+                <p>You're not just building pages.</p>
+
+                <p>You're designing spaces.</p>
+
+                <p>And every space needs a structure.</p>
+              </article>
+            </div>
+            <aside class="aside" aria-label="Work with Made by Olayinka">
+              <div class="sidebar-cta">
+                <span class="sidebar-eyebrow">WORK WITH ME</span>
+                <h2>Need a Website That Actually Converts?</h2>
+                <p>
+                  I help startups, SaaS companies and growing businesses build
+                  fast, modern, conversion-focused websites.
+                </p>
+                <ul class="sidebar-services">
+                  <li>Webflow Development</li>
+                  <li>Framer Development</li>
+                  <li>WordPress Development</li>
+                  <li>Website Redesigns</li>
+                  <li>White-Label Development</li>
+                </ul>
+                <a href="/contact.html" class="sidebar-btn"
+                  >Let's Work Together <span aria-hidden="true">→</span></a
+                >
+                <div class="sidebar-footer">
+                  <p>Have a project in mind?</p>
+                  <a href="/contact.html">Let's talk about it →</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container_large">
+        <div class="padding_global">
+          <div class="footer-cta">
+            <h2>Imagine your perfect website.<br />Now let's make it real.</h2>
+            <div class="btn-wrapper center">
+              <a href="/contact.html" class="primary-btn">Hire me today →</a>
+            </div>
+          </div>
+          <div class="foot">
+            <div class="foot-left">
+              <h3>Olayinka Ajelolu</h3>
+              <p>Your search for a Webflow freelancer ends here.</p>
+              <div class="socials">
+                <a
+                  href="https://www.linkedin.com/in/designeryinka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  ><img src="/images/linkedin.svg" alt="" /></a
+                ><a
+                  href="https://www.behance.net/designeryinka"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Behance"
+                  ><img src="/images/iconmonstr-behance-1.svg" alt="" /></a
+                ><a
+                  href="https://www.instagram.com/designer_yinka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  ><img src="/images/iconmonstr-instagram-11.svg" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="foot-right">
+              <div class="navigation">
+                <p>Navigation</p>
+                <ul class="footer-links">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/#work">Work</a></li>
+                  <li><a href="/#services">Services</a></li>
+                  <li><a href="/#reviews">Reviews</a></li>
+                  <li><a href="/blog.html">Blog</a></li>
+                  <li><a href="/contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="navigation">
+                <p>Get started</p>
+                <ul class="footer-links">
+                  <li><a href="/contact.html">Start a project</a></li>
+                  <li><a href="/white-label.html">For agencies</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="copywrite">
+            <p>Copyright © 2026. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
