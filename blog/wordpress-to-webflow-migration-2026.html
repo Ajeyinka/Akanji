@@ -1,0 +1,1782 @@
+<!doctype html>
+<!doctype html>
+
+<!doctype html>
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+      WordPress to Webflow Migration: Complete SEO Guide (2026) | Made by
+      Olayinka
+    </title>
+    <meta
+      content="Learn how to migrate WordPress to Webflow while protecting your SEO. Follow this guide to CMS imports, 301 redirects, content migration and launch testing."
+      name="description"
+    />
+    <meta content="Olayinka Ajelolu" name="author" />
+    <meta content="index, follow" name="robots" />
+    <link
+      href="https://madebyolayinka.com/blog/wordpress-to-webflow-migration/"
+      rel="canonical"
+    />
+    <link href="/images/favicon.png" rel="icon" type="image/png" />
+    <meta content="article" property="og:type" />
+    <meta content="Made by Olayinka" property="og:site_name" />
+    <meta
+      content="WordPress to Webflow Migration: The Complete SEO Guide for 2026"
+      property="og:title"
+    />
+    <meta
+      content="Learn how to migrate WordPress to Webflow while protecting your SEO. Follow this guide to CMS imports, 301 redirects, content migration and launch testing."
+      property="og:description"
+    />
+    <meta
+      content="https://madebyolayinka.com/blog/wordpress-to-webflow-migration/"
+      property="og:url"
+    />
+    <meta
+      content="https://madebyolayinka.com/images/blog/wordpress-to-webflow-migration.webp"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="WordPress to Webflow Migration: The Complete SEO Guide for 2026"
+      name="twitter:title"
+    />
+    <meta
+      content="Learn how to migrate WordPress to Webflow while protecting your SEO. Follow this guide to CMS imports, 301 redirects, content migration and launch testing."
+      name="twitter:description"
+    />
+    <meta
+      content="https://madebyolayinka.com/images/blog/wordpress-to-webflow-migration.webp"
+      name="twitter:image"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&amp;family=Roboto+Mono:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="../blog/blog.css" rel="stylesheet" />
+    <script defer="" src="/script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "WordPress to Webflow Migration: The Complete SEO Guide for 2026",
+        "description": "Learn how to migrate WordPress to Webflow while protecting your SEO. Follow this guide to CMS imports, 301 redirects, content migration and launch testing.",
+        "url": "https://madebyolayinka.com/blog/wordpress-to-webflow-migration/",
+        "image": "https://madebyolayinka.com/images/blog/wordpress-to-webflow-migration.webp",
+        "datePublished": "2026-10-04",
+        "dateModified": "2026-10-04",
+        "author": {
+          "@type": "Person",
+          "name": "Olayinka Ajelolu",
+          "url": "https://madebyolayinka.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Made by Olayinka",
+          "url": "https://madebyolayinka.com/"
+        },
+        "inLanguage": "en",
+        "articleSection": "Webflow & Website Migration"
+      }
+    </script>
+    <style>
+      .article .table-scroll {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1.5rem 0;
+      }
+      .article .table-scroll table {
+        min-width: 560px;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .article .table-scroll th,
+      .article .table-scroll td {
+        padding: 0.85rem;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid #e5ebf3;
+      }
+      .article .table-scroll th {
+        background: #f5f8ff;
+        color: #071a36;
+      }
+      .article .bottom-cta {
+        margin: 3rem 0;
+        padding: 2rem;
+        border-radius: 16px;
+        background: #f5f8ff;
+      }
+      .article .bottom-cta a[href*="contact"] {
+        display: inline-block;
+        padding: 0.85rem 1.25rem;
+        background: #315fe9;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+      @media (max-width: 600px) {
+        .article .bottom-cta {
+          padding: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-wrapper">
+        <a class="logos" href="/">
+          <img alt="" src="../images/avarta.svg" srcset="" />
+        </a>
+        <ul class="nav-list">
+          <li>
+            <a href="/index.html#work"> Work </a>
+          </li>
+          <li>
+            <a href="/index.html#services"> Services </a>
+          </li>
+          <li>
+            <a href="/white-label.html"> For Agencies </a>
+          </li>
+          <li>
+            <a href="/blog.html"> Blog </a>
+          </li>
+        </ul>
+        <div class="btn-wrap">
+          <a class="primary-btn" href="/contact.html">
+            Hire me today
+            <svg
+              fill="currentColor"
+              height="100%"
+              viewbox="0 0 15 15"
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.07524 12.3125L8.88774 7.50001L4.07524 2.68751L5.31249 1.45026L11.3622 7.50001L5.31249 13.5498L4.07524 12.3125Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="btn-toggle-hold">
+          <a class="toggle_button" href="#" id="toggle_button">
+            <span class="bar one"> </span>
+            <span class="bar two"> </span>
+            <span class="bar three"> </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section aria-labelledby="article-title" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">WEBFLOW &amp; WEBSITE MIGRATION · SEO GUIDE</p>
+            <h1 id="article-title">
+              WordPress to Webflow Migration:
+              <span>The Complete SEO Guide</span>
+            </h1>
+            <p class="hero-desc">
+              Move your WordPress website to Webflow with confidence. A
+              practical guide to CMS imports, 301 redirects, SEO preservation,
+              integrations and launch testing.
+            </p>
+            <div class="byline">
+              <span aria-hidden="true" class="avatar"> OA </span>
+              <span>
+                <strong> Olayinka Ajelolu </strong>
+                <br />
+                Web Designer &amp; Developer
+              </span>
+            </div>
+          </div>
+          <div
+            aria-label="Illustration of WordPress content moving to Webflow with CMS, SEO and redirects"
+            class="hero-art"
+            role="img"
+          >
+            <div class="glow"></div>
+            <div class="float-tag tag-one">✦ WordPress → Webflow</div>
+            <div class="art-window">
+              <div class="window-bar">
+                <i class="dot"></i><i class="dot"></i><i class="dot"></i
+                ><span class="window-url">migration-workflow.design</span>
+              </div>
+              <div class="prompt-ui">
+                <div class="ui-label">YOUR WEBFLOW MIGRATION PLAN</div>
+                <div class="ui-title">Move your site. Keep your SEO. ↗</div>
+                <div class="prompt-row">
+                  <div class="prompt-icon">▣</div>
+                  <div>
+                    <strong>01 · Audit &amp; export</strong
+                    ><small>Protect content, URLs and media</small>
+                  </div>
+                </div>
+                <div class="prompt-row">
+                  <div class="prompt-icon">⇄</div>
+                  <div>
+                    <strong>02 · Build &amp; import</strong
+                    ><small>Map WordPress content to Webflow CMS</small>
+                  </div>
+                </div>
+                <div class="prompt-row">
+                  <div class="prompt-icon">↗</div>
+                  <div>
+                    <strong>03 · Redirect &amp; launch</strong
+                    ><small>Preserve SEO and test every workflow</small>
+                  </div>
+                </div>
+                <div class="ui-footer">
+                  <span>Every page has a destination.</span
+                  ><span class="ui-send">Explore ↗</span>
+                </div>
+              </div>
+            </div>
+            <div class="float-tag tag-two">{ seo: preserved }</div>
+          </div>
+        </div>
+      </section>
+      <div class="container article-layout">
+        <article
+          aria-label="WordPress to Webflow Migration: The Complete SEO Guide for 2026"
+          class="article"
+        >
+          <p>
+            Migrating your website from WordPress to Webflow can be an excellent
+            opportunity to improve your website's design, simplify content
+            management and create a more efficient marketing workflow.
+          </p>
+          <p>
+            But there's one concern that stops many business owners from making
+            the switch:
+            <strong
+              >Will migrating from WordPress to Webflow hurt my SEO?</strong
+            >
+          </p>
+          <p>
+            If your existing website generates organic traffic, leads or sales,
+            the last thing you want is to lose years of search visibility
+            because of broken URLs, missing content or incorrectly configured
+            redirects.
+          </p>
+          <p>
+            The good news is that a WordPress-to-Webflow migration doesn't
+            automatically mean losing your Google rankings.
+          </p>
+          <p>
+            With careful planning, proper content migration, accurate 301
+            redirects and thorough testing, you can reduce the risks associated
+            with moving your website.
+          </p>
+          <p>
+            In this guide, you'll learn how to migrate WordPress to Webflow step
+            by step, including how to export your existing content, configure
+            Webflow CMS, preserve important SEO elements, migrate images and
+            forms, and monitor your website after launch.
+          </p>
+          <p>
+            Whether you're a business owner considering a platform change or a
+            developer managing a client migration, this guide will help you
+            approach the process with confidence.
+          </p>
+          <h2 id="1-why-migrate-from-wordpress-to-webflow">
+            1. Why Migrate From WordPress to Webflow?
+          </h2>
+          <p>
+            WordPress is a powerful content management system, but it isn't
+            necessarily the best fit for every business.
+          </p>
+          <p>
+            As websites grow, some businesses find themselves managing numerous
+            plugins, dealing with theme compatibility issues or relying on
+            developers to make relatively simple design changes.
+          </p>
+          <p>
+            Webflow offers an alternative approach by combining visual
+            development, CMS functionality, managed hosting and publishing in
+            one platform.
+          </p>
+          <h3>Benefits of moving to Webflow</h3>
+          <p><strong>Greater visual design control</strong></p>
+          <p>
+            Webflow allows developers to create custom layouts, responsive
+            components and animations using a visual development environment.
+          </p>
+          <p>
+            Unlike many traditional WordPress themes, Webflow provides detailed
+            control over page structure and styling without requiring a large
+            collection of design plugins.
+          </p>
+          <p><strong>Structured content management</strong></p>
+          <p>
+            Webflow CMS lets you create collections for blog posts, case
+            studies, team members, services and other repeatable content.
+          </p>
+          <p>
+            Once the collection templates are configured, your marketing team
+            can publish new content without rebuilding individual pages.
+          </p>
+          <p><strong>Managed hosting</strong></p>
+          <p>
+            Webflow handles much of the hosting infrastructure, reducing the
+            need to manage traditional server configurations, WordPress core
+            updates and plugin compatibility.
+          </p>
+          <p>
+            However, your website will still require content maintenance,
+            integration monitoring and periodic technical reviews.
+          </p>
+          <p><strong>Simplified marketing workflows</strong></p>
+          <p>
+            Webflow supports forms, CMS-driven landing pages, reusable
+            components and integrations with marketing tools.
+          </p>
+          <p>
+            For businesses that frequently update their websites, these
+            capabilities can make content and design management more efficient.
+          </p>
+          <h3>When you shouldn't migrate</h3>
+          <p>Moving to Webflow isn't always the right decision.</p>
+          <p>
+            If your website relies on WooCommerce, complex membership
+            functionality, extensive custom plugins or specialized backend
+            applications, a migration may require substantial redevelopment.
+          </p>
+          <p>
+            You should also evaluate Webflow's CMS limits, pricing and
+            integration capabilities before committing. See also:
+            <a href="/blog/webflow-vs-framer-vs-wordpress-2026/"
+              >Webflow vs. Framer vs. WordPress comparison</a
+            >.
+          </p>
+          <p>
+            A migration should solve an existing business problem rather than
+            simply follow a design trend.
+          </p>
+          <h2 id="2-wordpress-to-webflow-migration-checklist">
+            2. WordPress to Webflow Migration Checklist
+          </h2>
+          <p>Before starting, understand the complete migration process.</p>
+          <div
+            aria-label="Scrollable comparison table"
+            class="table-scroll"
+            role="region"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Main tasks</th>
+                  <th>Deliverable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Website audit</td>
+                  <td>Review URLs, content, SEO and functionality</td>
+                  <td>Existing website inventory</td>
+                </tr>
+                <tr>
+                  <td>Backup</td>
+                  <td>Preserve database, media and files</td>
+                  <td>Recoverable WordPress backup</td>
+                </tr>
+                <tr>
+                  <td>Content export</td>
+                  <td>Export posts, pages and custom fields</td>
+                  <td>XML or CSV files</td>
+                </tr>
+                <tr>
+                  <td>CMS planning</td>
+                  <td>Design Webflow collections and relationships</td>
+                  <td>CMS architecture</td>
+                </tr>
+                <tr>
+                  <td>Website development</td>
+                  <td>Rebuild layouts and responsive components</td>
+                  <td>Functional Webflow website</td>
+                </tr>
+                <tr>
+                  <td>Content migration</td>
+                  <td>Import content, images and metadata</td>
+                  <td>Populated CMS</td>
+                </tr>
+                <tr>
+                  <td>SEO migration</td>
+                  <td>Map URLs, configure redirects and metadata</td>
+                  <td>SEO migration plan</td>
+                </tr>
+                <tr>
+                  <td>Integration setup</td>
+                  <td>Reconnect forms, CRM and analytics</td>
+                  <td>Working integrations</td>
+                </tr>
+                <tr>
+                  <td>Quality assurance</td>
+                  <td>Test content, SEO and functionality</td>
+                  <td>Launch-ready website</td>
+                </tr>
+                <tr>
+                  <td>Launch</td>
+                  <td>Connect domain and publish</td>
+                  <td>Live Webflow website</td>
+                </tr>
+                <tr>
+                  <td>Monitoring</td>
+                  <td>Review indexing, traffic and conversions</td>
+                  <td>Post-launch report</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            The most important principle is to prepare and test your new website
+            before replacing the existing one.
+          </p>
+          <h2 id="3-step-1-audit-your-existing-wordpress-website">
+            3. Step 1: Audit Your Existing WordPress Website
+          </h2>
+          <p>
+            A thorough website audit is the foundation of a successful
+            migration.
+          </p>
+          <p>
+            Before rebuilding anything, document your existing pages, content,
+            technical configuration and important business functionality.
+          </p>
+          <h3>Create an inventory of your existing URLs</h3>
+          <p>List every important page on your WordPress website.</p>
+          <p>For example:</p>
+          <div
+            aria-label="Scrollable comparison table"
+            class="table-scroll"
+            role="region"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>Existing URL</th>
+                  <th>Page type</th>
+                  <th>Planned action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>/</code></td>
+                  <td>Homepage</td>
+                  <td>Rebuild</td>
+                </tr>
+                <tr>
+                  <td><code>/about/</code></td>
+                  <td>Static page</td>
+                  <td>Rebuild</td>
+                </tr>
+                <tr>
+                  <td><code>/services/</code></td>
+                  <td>Service page</td>
+                  <td>Rebuild</td>
+                </tr>
+                <tr>
+                  <td><code>/blog/</code></td>
+                  <td>Blog index</td>
+                  <td>Rebuild</td>
+                </tr>
+                <tr>
+                  <td><code>/blog/example-post/</code></td>
+                  <td>Blog article</td>
+                  <td>Import into CMS</td>
+                </tr>
+                <tr>
+                  <td><code>/contact/</code></td>
+                  <td>Contact page</td>
+                  <td>Rebuild</td>
+                </tr>
+                <tr>
+                  <td><code>/old-service/</code></td>
+                  <td>Outdated page</td>
+                  <td>Redirect or retire</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>For small websites, you can create this inventory manually.</p>
+          <p>
+            For larger websites, use a crawler such as Screaming Frog to
+            identify existing URLs, metadata, headings, internal links, images
+            and canonical URLs.
+          </p>
+          <h3>Identify your highest-performing pages</h3>
+          <p>
+            Use Google Search Console and your analytics platform to identify
+            pages that generate organic traffic, rank for important keywords,
+            attract backlinks or produce qualified leads.
+          </p>
+          <p>Prioritize these pages during migration.</p>
+          <p>
+            For example, if an existing service page generates most of your
+            website inquiries, preserve its useful content and search intent
+            rather than replacing it with a visually attractive but less
+            informative page.
+          </p>
+          <h3>Audit your existing SEO</h3>
+          <p>Record the following information for important pages:</p>
+          <ul>
+            <li>SEO titles and meta descriptions.</li>
+            <li>H1 headings and content structure.</li>
+            <li>Canonical URLs.</li>
+            <li>Indexing directives.</li>
+            <li>Structured data.</li>
+            <li>Image alt text.</li>
+            <li>Internal and external links.</li>
+            <li>Organic traffic and search queries.</li>
+          </ul>
+          <p>
+            Export your current sitemap and preserve a copy of your existing
+            robots.txt configuration.
+          </p>
+          <h3>Audit WordPress functionality</h3>
+          <p>Document the functionality provided by your theme and plugins.</p>
+          <p>
+            Common examples include contact forms, booking systems, ecommerce,
+            memberships, search, multilingual content, CRM integrations and
+            analytics.
+          </p>
+          <p>
+            For each feature, determine whether it can be recreated using
+            Webflow's native capabilities, an integration or custom development.
+          </p>
+          <h2 id="4-step-2-back-up-your-wordpress-website">
+            4. Step 2: Back Up Your WordPress Website
+          </h2>
+          <p>Never begin a migration without creating a reliable backup.</p>
+          <p>
+            Your backup should include the WordPress database, uploaded media,
+            themes, plugins and relevant configuration files.
+          </p>
+          <p>
+            You can create a backup through your hosting provider or a trusted
+            WordPress backup tool.
+          </p>
+          <p>
+            Store the backup somewhere independent of your WordPress
+            installation.
+          </p>
+          <h3>Export your WordPress content</h3>
+          <p>In your WordPress dashboard, navigate to:</p>
+          <p>
+            <strong>Tools → Export → All Content → Download Export File</strong>
+          </p>
+          <p>
+            WordPress generates an XML file containing supported content such as
+            posts, pages, categories, tags and custom fields.
+          </p>
+          <p>However, this export is not a complete website backup.</p>
+          <p>
+            It doesn't independently preserve every aspect of your hosting
+            environment, theme functionality or plugin configuration.
+          </p>
+          <h3>Export additional information</h3>
+          <p>
+            Depending on your website, you may need separate exports for SEO
+            metadata, custom fields, form submissions, ecommerce records and
+            plugin-specific data.
+          </p>
+          <p>
+            Also preserve your media library and any downloadable resources.
+          </p>
+          <p>
+            Keep your existing WordPress website operational until the new
+            Webflow website has been published and verified.
+          </p>
+          <h2 id="5-step-3-export-wordpress-content-to-csv">
+            5. Step 3: Export WordPress Content to CSV
+          </h2>
+          <p>Webflow supports CSV imports for CMS collections.</p>
+          <p>WordPress, however, exports content in XML format by default.</p>
+          <p>
+            You'll therefore need to convert your WordPress content into a
+            suitable CSV structure before importing it.
+          </p>
+          <h3>Option A: Use a WordPress export plugin</h3>
+          <p>
+            A suitable WordPress export plugin can allow you to select specific
+            fields and export posts directly to CSV.
+          </p>
+          <p>
+            For a typical blog migration, export the title, slug, article
+            content, excerpt, publication date, category, author, featured image
+            and relevant SEO metadata.
+          </p>
+          <p>
+            Check whether your export plugin supports custom fields if your
+            website relies on them.
+          </p>
+          <h3>Option B: Use the WordPress REST API</h3>
+          <p>
+            Developers can retrieve WordPress content programmatically using the
+            REST API.
+          </p>
+          <p>For example:</p>
+          <p>
+            <code
+              >https://example.com/wp-json/wp/v2/posts?per_page=100&amp;page=1</code
+            >
+          </p>
+          <p>
+            This endpoint can retrieve up to 100 posts per request in a typical
+            WordPress installation.
+          </p>
+          <p>
+            If your website contains more posts, paginate through the remaining
+            results.
+          </p>
+          <p>
+            Some custom fields and plugin-generated metadata may require
+            additional configuration or separate exports.
+          </p>
+          <h3>Option C: Convert the WordPress XML file</h3>
+          <p>You can also convert your WordPress XML export into CSV.</p>
+          <p>
+            This approach can be useful when you already have a complete export
+            and want to transform the data without depending on additional
+            WordPress plugins.
+          </p>
+          <p>
+            Check the resulting file carefully because rich text, shortcodes and
+            plugin-specific content may need additional processing.
+          </p>
+          <h3>Example CSV structure</h3>
+          <p>A simple blog export might contain the following fields:</p>
+          <div
+            aria-label="Scrollable comparison table"
+            class="table-scroll"
+            role="region"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Slug</th>
+                  <th>Category</th>
+                  <th>Featured Image</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Choosing a Website Platform</td>
+                  <td>choosing-a-platform</td>
+                  <td>Web Design</td>
+                  <td>image-01.jpg</td>
+                </tr>
+                <tr>
+                  <td>Improving Website Speed</td>
+                  <td>improve-website-speed</td>
+                  <td>Performance</td>
+                  <td>image-02.jpg</td>
+                </tr>
+                <tr>
+                  <td>Website SEO Checklist</td>
+                  <td>website-seo-checklist</td>
+                  <td>SEO</td>
+                  <td>image-03.jpg</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Your actual CSV should also contain the complete article content,
+            publication date, excerpt and any additional fields required by your
+            Webflow CMS.
+          </p>
+          <p>
+            Before importing, check for duplicate slugs, missing values, broken
+            characters, incorrect dates and unsupported formatting.
+          </p>
+          <h2 id="6-step-4-plan-your-webflow-cms-architecture">
+            6. Step 4: Plan Your Webflow CMS Architecture
+          </h2>
+          <p>
+            One of the biggest mistakes during migration is importing content
+            before designing the new CMS structure.
+          </p>
+          <p>Webflow organizes structured content into collections.</p>
+          <p>
+            For example, a business website might use separate collections for
+            blog posts, categories, authors, case studies and team members.
+          </p>
+          <h3>Example: Blog collection</h3>
+          <div
+            aria-label="Scrollable comparison table"
+            class="table-scroll"
+            role="region"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>WordPress field</th>
+                  <th>Suggested Webflow field</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Post title</td>
+                  <td>Name</td>
+                </tr>
+                <tr>
+                  <td>Post slug</td>
+                  <td>Slug</td>
+                </tr>
+                <tr>
+                  <td>Article content</td>
+                  <td>Rich Text</td>
+                </tr>
+                <tr>
+                  <td>Excerpt</td>
+                  <td>Plain Text</td>
+                </tr>
+                <tr>
+                  <td>Featured image</td>
+                  <td>Image</td>
+                </tr>
+                <tr>
+                  <td>Publication date</td>
+                  <td>Date/Time</td>
+                </tr>
+                <tr>
+                  <td>Category</td>
+                  <td>Reference</td>
+                </tr>
+                <tr>
+                  <td>Author</td>
+                  <td>Reference</td>
+                </tr>
+                <tr>
+                  <td>SEO title</td>
+                  <td>Plain Text</td>
+                </tr>
+                <tr>
+                  <td>Meta description</td>
+                  <td>Plain Text</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            The exact structure depends on your website and the Webflow CMS
+            features available on your plan.
+          </p>
+          <h3>Create related collections</h3>
+          <p>
+            If your blog uses categories and authors, consider creating separate
+            collections for them.
+          </p>
+          <p>
+            For example, an Authors collection could include each author's name,
+            biography, profile image and social links.
+          </p>
+          <p>
+            A Categories collection could contain category names, descriptions
+            and featured images.
+          </p>
+          <p>
+            You can then connect these collections to your Blog Posts collection
+            using reference fields.
+          </p>
+          <h3>Handle custom post types</h3>
+          <p>
+            If your WordPress website uses custom post types, evaluate each one
+            separately.
+          </p>
+          <p>
+            A portfolio website might require a Projects collection containing a
+            project title, client, industry, featured image, gallery,
+            description and testimonial.
+          </p>
+          <p>Some WordPress custom fields may not map directly to Webflow.</p>
+          <p>
+            In these cases, restructure the content rather than trying to
+            reproduce every detail of the original database.
+          </p>
+          <h3>Check CMS limits</h3>
+          <p>
+            Before importing, confirm that your chosen Webflow plan supports
+            your required number of CMS items, collections and fields.
+          </p>
+          <p>
+            Large websites may require additional planning or a different
+            subscription tier.
+          </p>
+          <h2 id="7-step-5-rebuild-your-website-in-webflow">
+            7. Step 5: Rebuild Your Website in Webflow
+          </h2>
+          <p>
+            Once your CMS architecture is ready, begin developing your new
+            website.
+          </p>
+          <p>You can use a Webflow template or create a custom design.</p>
+          <p>
+            For businesses with established branding, the goal may be to
+            preserve recognizable visual elements while improving layout,
+            responsiveness and usability.
+          </p>
+          <h3>Establish a design system</h3>
+          <p>
+            Define your typography, colors, spacing, buttons, forms and reusable
+            components.
+          </p>
+          <p>
+            A consistent design system makes development more efficient and
+            simplifies future maintenance.
+          </p>
+          <h3>Build reusable components</h3>
+          <p>
+            Create reusable navigation, footer, cards, calls to action and other
+            shared elements.
+          </p>
+          <p>
+            This allows you to update common sections without editing every page
+            individually.
+          </p>
+          <h3>Develop responsive layouts</h3>
+          <p>
+            Test your designs across desktop, tablet and mobile breakpoints.
+          </p>
+          <p>
+            Pay particular attention to navigation, text wrapping, image
+            proportions, content spacing and interactive elements.
+          </p>
+          <p>Don't rely solely on Webflow's desktop preview.</p>
+          <h3>Create CMS collection templates</h3>
+          <p>
+            Build templates for your blog posts, case studies and other dynamic
+            content.
+          </p>
+          <p>Connect each template to the appropriate CMS fields.</p>
+          <p>
+            For example, your blog template should display the article title,
+            featured image, publication date, author, main content and related
+            articles.
+          </p>
+          <h3>Preserve valuable content</h3>
+          <p>
+            A redesign is an opportunity to improve your website, but avoid
+            unnecessarily removing content that already performs well.
+          </p>
+          <p>
+            Maintain important topics, useful information and search intent
+            while improving the user experience.
+          </p>
+          <h2 id="8-step-6-import-wordpress-content-into-webflow-cms">
+            8. Step 6: Import WordPress Content Into Webflow CMS
+          </h2>
+          <p>
+            After creating your collections and templates, you can import your
+            content.
+          </p>
+          <p>Webflow supports bulk CMS imports through CSV files.</p>
+          <h3>Prepare your CSV</h3>
+          <p>
+            Ensure that each column corresponds to the intended Webflow field.
+          </p>
+          <p>
+            Remove unnecessary WordPress shortcodes and plugin-specific markup.
+          </p>
+          <p>
+            Check that your rich text is compatible with your import workflow.
+          </p>
+          <h3>Import your content</h3>
+          <p>In Webflow:</p>
+          <ol>
+            <li>Open the Collections panel.</li>
+            <li>Create or select your CMS collection.</li>
+            <li>Choose the CSV import option.</li>
+            <li>Upload your prepared CSV.</li>
+            <li>Map the CSV columns to your collection fields.</li>
+            <li>Review the field mappings.</li>
+            <li>Complete the import.</li>
+          </ol>
+          <p>
+            Webflow also supports mapping imported content to reference fields,
+            although relationships and imported values should be verified
+            carefully.
+          </p>
+          <h3>Test before importing everything</h3>
+          <p>Start with a small sample.</p>
+          <p>
+            Import a simple article, an article containing multiple images and a
+            more complex article with lists, links or embedded content.
+          </p>
+          <p>Review how each appears in your CMS template.</p>
+          <p>
+            Once the sample looks correct, proceed with the remaining content.
+          </p>
+          <h3>Common CMS import problems</h3>
+          <p>
+            <strong>Broken rich text:</strong> Remove unsupported WordPress
+            shortcodes and review the source formatting.
+          </p>
+          <p>
+            <strong>Missing images:</strong> Confirm that image URLs are
+            accessible and compatible with your import workflow.
+          </p>
+          <p>
+            <strong>Incorrect dates:</strong> Standardize date formats before
+            importing.
+          </p>
+          <p>
+            <strong>Broken references:</strong> Create dependent collection
+            items before importing content that references them.
+          </p>
+          <p>
+            <strong>Duplicate slugs:</strong> Ensure every CMS item has a unique
+            slug.
+          </p>
+          <p>
+            <strong>Missing SEO metadata:</strong> Export metadata separately if
+            your WordPress export doesn't include the required fields.
+          </p>
+          <h2 id="9-step-7-migrate-images-and-media">
+            9. Step 7: Migrate Images and Media
+          </h2>
+          <p>Images are often overlooked during website migrations.</p>
+          <p>
+            Your WordPress website may contain featured images, inline article
+            images, galleries, downloadable PDFs and other media.
+          </p>
+          <p>
+            Create an inventory of important assets before transferring them.
+          </p>
+          <h3>Featured images</h3>
+          <p>Transfer the original images where possible.</p>
+          <p>Use suitable image dimensions and formats for the new website.</p>
+          <p>Avoid unnecessarily enlarging or repeatedly compressing images.</p>
+          <h3>Inline article images</h3>
+          <p>
+            Check that images embedded in your articles still load correctly.
+          </p>
+          <p>
+            If your imported content references images hosted on your old
+            WordPress server, consider replacing those URLs with assets hosted
+            through your new website.
+          </p>
+          <p>
+            Otherwise, the images may break when your old hosting is cancelled.
+          </p>
+          <h3>Image galleries</h3>
+          <p>Complex WordPress galleries may require additional processing.</p>
+          <p>
+            Depending on your Webflow CMS structure, you may need multi-image
+            fields, separate collections or custom components.
+          </p>
+          <p>
+            Test the gallery implementation before importing large amounts of
+            content.
+          </p>
+          <h3>PDFs and downloadable resources</h3>
+          <p>Re-upload important downloadable files and update their links.</p>
+          <p>
+            If existing document URLs attract traffic or backlinks, include them
+            in your migration plan.
+          </p>
+          <h2 id="10-step-8-preserve-your-seo-with-proper-url-mapping">
+            10. Step 8: Preserve Your SEO With Proper URL Mapping
+          </h2>
+          <p>
+            URL mapping is one of the most important parts of a
+            WordPress-to-Webflow migration.
+          </p>
+          <p>
+            If your existing website has established search visibility, changing
+            URLs unnecessarily introduces avoidable risk.
+          </p>
+          <p>Whenever possible, preserve the existing URL structure.</p>
+          <h3>Create a redirect mapping spreadsheet</h3>
+          <p>Document every important old URL and its intended destination.</p>
+          <p>For example:</p>
+          <div
+            aria-label="Scrollable comparison table"
+            class="table-scroll"
+            role="region"
+            tabindex="0"
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>Old WordPress URL</th>
+                  <th>New Webflow URL</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>/about-us/</code></td>
+                  <td><code>/about/</code></td>
+                  <td>301 redirect</td>
+                </tr>
+                <tr>
+                  <td><code>/our-services/</code></td>
+                  <td><code>/services/</code></td>
+                  <td>301 redirect</td>
+                </tr>
+                <tr>
+                  <td><code>/blog/website-tips/</code></td>
+                  <td><code>/blog/website-tips/</code></td>
+                  <td>Preserve URL</td>
+                </tr>
+                <tr>
+                  <td><code>/old-service/</code></td>
+                  <td><code>/services/</code></td>
+                  <td>Redirect if relevant</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            If an old page has been replaced, redirect it to the most relevant
+            equivalent.
+          </p>
+          <p>Avoid redirecting unrelated pages to your homepage.</p>
+          <h3>Understand trailing slashes</h3>
+          <p>WordPress and Webflow may handle trailing slashes differently.</p>
+          <p>For example, your WordPress URL might be:</p>
+          <p><code>https://example.com/blog/website-tips/</code></p>
+          <p>Your new Webflow URL might be:</p>
+          <p><code>https://example.com/blog/website-tips</code></p>
+          <p>
+            Test how the new website handles both versions and whether the
+            appropriate canonical URL is generated.
+          </p>
+          <h3>Configure Webflow 301 redirects</h3>
+          <p>In Webflow, navigate to:</p>
+          <p><strong>Site settings → Publishing → 301 redirects</strong></p>
+          <p>Add the old path and the new destination.</p>
+          <p>For example:</p>
+          <p>Old path: <code>/about-us</code></p>
+          <p>Redirect to: <code>/about</code></p>
+          <p>Publish your website to activate the redirect.</p>
+          <p>
+            Webflow also supports importing redirects through CSV files, which
+            is useful for larger migrations.
+          </p>
+          <p>
+            <strong>Important:</strong> Importing a new redirect CSV can replace
+            existing redirect rules. Export and preserve your existing rules
+            before uploading an updated file.
+          </p>
+          <h3>Avoid redirect chains</h3>
+          <p>
+            A redirect chain occurs when one URL redirects to another URL that
+            redirects again.
+          </p>
+          <p>For example:</p>
+          <p>
+            <code>/old-page</code> → <code>/previous-page</code> →
+            <code>/new-page</code>
+          </p>
+          <p>
+            Where possible, redirect the original URL directly to the final
+            destination.
+          </p>
+          <p>This improves efficiency and reduces unnecessary requests.</p>
+          <h3>Keep redirects in place</h3>
+          <p>
+            Google recommends maintaining permanent redirects for at least one
+            year.
+          </p>
+          <p>
+            Keeping important redirects longer is often beneficial, especially
+            when external websites continue linking to old URLs.
+          </p>
+          <h2 id="11-step-9-transfer-seo-metadata-and-structured-data">
+            11. Step 9: Transfer SEO Metadata and Structured Data
+          </h2>
+          <p>
+            Your new website should preserve the important SEO information
+            associated with your existing pages.
+          </p>
+          <h3>SEO titles and meta descriptions</h3>
+          <p>
+            Export the SEO titles and meta descriptions from your WordPress
+            website.
+          </p>
+          <p>
+            In Webflow, configure metadata for static pages and use dynamic CMS
+            fields for collection templates.
+          </p>
+          <p>
+            For example, your Blog Posts collection can include separate SEO
+            Title and Meta Description fields.
+          </p>
+          <h3>Canonical URLs</h3>
+          <p>Review canonical tags on important pages.</p>
+          <p>
+            Make sure they point to the intended production URLs rather than
+            staging domains or outdated WordPress URLs.
+          </p>
+          <h3>Structured data</h3>
+          <p>
+            If your WordPress website uses structured data, identify which
+            schema types are relevant.
+          </p>
+          <p>
+            For example, a business website might use Organization or
+            ProfessionalService markup, while blog posts may use BlogPosting
+            markup.
+          </p>
+          <p>
+            Recreate the appropriate structured data in Webflow using supported
+            custom code or other suitable implementation methods.
+          </p>
+          <p>
+            Only include structured data that accurately represents visible
+            content.
+          </p>
+          <h3>XML sitemap</h3>
+          <p>
+            Webflow can automatically generate an XML sitemap for your published
+            website.
+          </p>
+          <p>
+            Review it after launch and confirm that important pages are
+            included.
+          </p>
+          <p>Submit your sitemap through Google Search Console.</p>
+          <h3>Robots.txt and indexing</h3>
+          <p>
+            Check that your production website isn't accidentally blocked from
+            indexing.
+          </p>
+          <p>
+            Review robots.txt and any page-level noindex settings before launch.
+          </p>
+          <h2 id="12-step-10-reconnect-forms-crm-and-marketing-integrations">
+            12. Step 10: Reconnect Forms, CRM and Marketing Integrations
+          </h2>
+          <p>Your website needs to do more than display content.</p>
+          <p>
+            Before launching, make sure every important business workflow works
+            correctly.
+          </p>
+          <h3>Contact forms</h3>
+          <p>Rebuild your contact forms in Webflow.</p>
+          <p>
+            Connect them to the appropriate destination, such as email, HubSpot,
+            Google Sheets or an automation platform.
+          </p>
+          <p>
+            Submit several test entries and verify that the information reaches
+            the intended destination.
+          </p>
+          <h3>CRM integrations</h3>
+          <p>
+            If your WordPress website previously connected to HubSpot or another
+            CRM, rebuild and test those integrations.
+          </p>
+          <p>
+            Verify field mappings, consent requirements, notifications and
+            automation triggers.
+          </p>
+          <h3>Booking systems</h3>
+          <p>Reconnect Calendly or your preferred scheduling platform.</p>
+          <p>Test the complete booking process on desktop and mobile.</p>
+          <h3>Analytics and conversion tracking</h3>
+          <p>
+            Configure Google Analytics, Google Tag Manager or your preferred
+            analytics platform.
+          </p>
+          <p>
+            Check that page views and important conversion events are recorded
+            correctly.
+          </p>
+          <p>Avoid introducing duplicate tracking during the migration.</p>
+          <h2 id="13-step-11-test-your-webflow-website-before-launch">
+            13. Step 11: Test Your Webflow Website Before Launch
+          </h2>
+          <p>
+            Thorough testing reduces the likelihood of discovering serious
+            problems after your website goes live.
+          </p>
+          <h3>Functional testing</h3>
+          <p>
+            Test navigation, internal links, forms, buttons, downloads, CMS
+            pages and interactive components.
+          </p>
+          <p>Verify that every important user journey works correctly.</p>
+          <h3>Responsive testing</h3>
+          <p>
+            Review your website across desktop, tablet and mobile screen sizes.
+          </p>
+          <p>
+            Pay particular attention to navigation, typography, spacing, forms
+            and images.
+          </p>
+          <h3>Content testing</h3>
+          <p>
+            Compare migrated content against your original WordPress website.
+          </p>
+          <p>
+            Check titles, publication dates, featured images, headings,
+            formatting, internal links and downloadable resources.
+          </p>
+          <h3>SEO testing</h3>
+          <p>
+            Verify metadata, canonical URLs, redirects, sitemap configuration
+            and indexing settings.
+          </p>
+          <p>
+            Use a crawler to identify broken links, missing metadata and
+            unexpected redirects.
+          </p>
+          <h3>Performance testing</h3>
+          <p>Run important pages through Google PageSpeed Insights.</p>
+          <p>
+            Review image sizes, unnecessary scripts, layout stability and mobile
+            performance.
+          </p>
+          <p>
+            Focus on meaningful improvements rather than achieving a perfect
+            Lighthouse score.
+          </p>
+          <h2 id="14-step-12-connect-your-domain-and-launch">
+            14. Step 12: Connect Your Domain and Launch
+          </h2>
+          <p>
+            Once your new Webflow website is ready, connect your custom domain.
+          </p>
+          <p>
+            In Webflow, open your site's publishing settings and follow the
+            instructions for adding a custom domain.
+          </p>
+          <p>
+            Webflow will provide the DNS records required for your
+            configuration.
+          </p>
+          <p>
+            Update those records through your domain registrar or DNS provider.
+          </p>
+          <h3>Protect your business email</h3>
+          <p>
+            If your domain also handles business email, avoid changing unrelated
+            MX, SPF, DKIM or DMARC records.
+          </p>
+          <p>A website migration shouldn't interrupt your email service.</p>
+          <h3>Launch checklist</h3>
+          <p>Before announcing your new website, confirm that:</p>
+          <ul>
+            <li>Your domain loads correctly over HTTPS.</li>
+            <li>Important pages are accessible.</li>
+            <li>Old URLs redirect to the correct destinations.</li>
+            <li>Contact forms and integrations work.</li>
+            <li>Analytics and conversion tracking are active.</li>
+            <li>Canonical URLs point to the correct domain.</li>
+            <li>Your sitemap is accessible.</li>
+            <li>Important pages are indexable.</li>
+            <li>Your website works properly on mobile.</li>
+          </ul>
+          <p>
+            Keep your original WordPress website and backups available during
+            the initial post-launch period.
+          </p>
+          <h2 id="15-step-13-monitor-your-seo-after-migration">
+            15. Step 13: Monitor Your SEO After Migration
+          </h2>
+          <p>Publishing your new website isn't the end of the migration.</p>
+          <p>
+            Monitor your website closely during the following weeks and months.
+          </p>
+          <h3>First 48 hours</h3>
+          <p>
+            Check your domain, redirects, forms, analytics and important pages.
+          </p>
+          <p>Resolve critical errors immediately.</p>
+          <h3>First week</h3>
+          <p>
+            Review Google Search Console for indexing problems, crawl errors and
+            unexpected changes in search visibility.
+          </p>
+          <p>
+            Inspect your most important landing pages and verify that internal
+            links point to the new URLs.
+          </p>
+          <h3>First month</h3>
+          <p>
+            Compare organic traffic, conversions, indexed pages and Core Web
+            Vitals against your pre-migration baseline.
+          </p>
+          <p>
+            Investigate significant changes rather than assuming every
+            fluctuation is caused by the migration.
+          </p>
+          <h3>Following months</h3>
+          <p>
+            Continue monitoring your search performance and update redirects,
+            content or technical settings where necessary.
+          </p>
+          <p>
+            Google notes that search rankings may fluctuate temporarily during a
+            significant site move.
+          </p>
+          <p>
+            For medium-sized websites, processing the move can take several
+            weeks or longer.
+          </p>
+          <h2 id="16-common-wordpress-to-webflow-migration-mistakes">
+            16. Common WordPress to Webflow Migration Mistakes
+          </h2>
+          <p>
+            Several avoidable mistakes can turn a straightforward migration into
+            a costly project.
+          </p>
+          <h3>Migrating without a complete backup</h3>
+          <p>Always preserve a recoverable copy of your original website.</p>
+          <h3>Changing URLs unnecessarily</h3>
+          <p>
+            Preserve existing URLs where practical and use permanent redirects
+            when changes are unavoidable.
+          </p>
+          <h3>Importing content without testing</h3>
+          <p>
+            Import a representative sample before transferring your entire CMS.
+          </p>
+          <h3>Forgetting plugin-dependent functionality</h3>
+          <p>
+            A WordPress export won't automatically reproduce functionality
+            created by plugins.
+          </p>
+          <p>Audit those features and plan appropriate replacements.</p>
+          <h3>Leaving images on the old hosting server</h3>
+          <p>
+            Ensure that important media remains accessible after your WordPress
+            hosting is discontinued.
+          </p>
+          <h3>Launching without testing forms</h3>
+          <p>
+            A visually attractive website can still lose leads if its forms and
+            integrations don't work.
+          </p>
+          <h3>Cancelling WordPress hosting too early</h3>
+          <p>
+            Keep your original website available until you've confirmed that the
+            migration is complete and all essential data has been preserved.
+          </p>
+          <h2 id="17-how-much-does-a-wordpress-to-webflow-migration-cost">
+            17. How Much Does a WordPress to Webflow Migration Cost?
+          </h2>
+          <p>
+            Migration costs depend on the website's size, design, content
+            structure and functionality. For wider budgeting context, read our
+            <a href="/blog/website-redesign-cost-2026.html/"
+              >website redesign cost guide</a
+            >.
+          </p>
+          <p>
+            For planning purposes, a straightforward small business migration
+            might cost approximately $2,000–$5,000.
+          </p>
+          <p>
+            A larger custom migration involving extensive CMS content,
+            integrations and technical SEO may require $5,000–$15,000 or more.
+          </p>
+          <p>
+            These are illustrative planning estimates rather than fixed market
+            rates or published Made by Olayinka prices.
+          </p>
+          <p>The main cost factors include:</p>
+          <ul>
+            <li>Number of unique pages.</li>
+            <li>Volume and complexity of CMS content.</li>
+            <li>Custom design requirements.</li>
+            <li>Forms and third-party integrations.</li>
+            <li>SEO migration complexity.</li>
+            <li>Content restructuring.</li>
+            <li>Testing and post-launch support.</li>
+          </ul>
+          <p>
+            A simple five-page website will generally cost less to migrate than
+            a content-heavy website with hundreds of posts and extensive custom
+            functionality.
+          </p>
+          <h2 id="18-frequently-asked-questions">
+            18. Frequently Asked Questions
+          </h2>
+          <h3>Can I migrate WordPress to Webflow automatically?</h3>
+          <p>
+            Some content can be transferred using exports, CSV transformations
+            and import tools.
+          </p>
+          <p>
+            However, a complete migration generally requires manual work to
+            rebuild layouts, configure CMS collections, reconnect functionality
+            and validate the finished website.
+          </p>
+          <h3>Can I import WordPress blog posts into Webflow?</h3>
+          <p>
+            Yes. You can export WordPress content, convert it into a suitable
+            CSV format and import it into Webflow CMS.
+          </p>
+          <p>
+            Check rich text, images, dates, categories and references after
+            importing.
+          </p>
+          <h3>Will I lose my Google rankings if I move to Webflow?</h3>
+          <p>Not necessarily.</p>
+          <p>
+            Preserving valuable content, maintaining existing URLs where
+            possible and implementing correct redirects can reduce
+            migration-related SEO risks.
+          </p>
+          <p>However, no migration process can guarantee unchanged rankings.</p>
+          <h3>Can I keep my existing domain?</h3>
+          <p>
+            Yes. You can connect your existing domain to Webflow by updating the
+            appropriate DNS records.
+          </p>
+          <p>
+            You don't need to purchase a new domain simply because you're
+            changing website platforms.
+          </p>
+          <h3>Is Webflow better than WordPress for SEO?</h3>
+          <p>Both platforms can support strong technical SEO.</p>
+          <p>
+            Webflow provides managed hosting and built-in SEO controls, while
+            WordPress offers extensive customization through plugins and custom
+            development.
+          </p>
+          <p>
+            Your content quality and technical implementation matter more than
+            the platform alone.
+          </p>
+          <h3>How long does a WordPress to Webflow migration take?</h3>
+          <p>
+            A small website may take two to four weeks, while a larger website
+            with custom design, extensive CMS content and complex integrations
+            can take several weeks or longer.
+          </p>
+          <p>
+            The timeline depends on project scope, content readiness and testing
+            requirements.
+          </p>
+          <h3>Should I redesign my website during migration?</h3>
+          <p>
+            You can, but combining a complete redesign with a platform migration
+            introduces additional variables.
+          </p>
+          <p>
+            If preserving search visibility is especially important, consider
+            retaining your most valuable content and URL structure while making
+            design improvements.
+          </p>
+          <p>
+            Google recommends changing one major element at a time where
+            practical.
+          </p>
+          <h2 id="final-thoughts-is-moving-from-wordpress-to-webflow-worth-it">
+            Final Thoughts: Is Moving From WordPress to Webflow Worth It?
+          </h2>
+          <p>
+            Migrating from WordPress to Webflow can be a valuable investment
+            when your business needs a modern, custom-designed website and a
+            more streamlined content management experience.
+          </p>
+          <p>
+            However, a successful migration requires much more than rebuilding
+            your homepage.
+          </p>
+          <p>
+            You need to audit your existing website, preserve valuable content,
+            plan your CMS architecture, implement redirects, reconnect
+            integrations and thoroughly test the finished website.
+          </p>
+          <p>
+            With careful planning, you can take advantage of Webflow's visual
+            development capabilities while reducing unnecessary disruption to
+            your existing search visibility and business operations.
+          </p>
+
+          <h3 id="references-and-further-reading">
+            References and further reading
+          </h3>
+          <ul>
+            <li>
+              <a
+                href="https://help.webflow.com/hc/en-us/articles/33961193662739-Migrate-your-site-from-WordPress-to-Webflow"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Webflow: Migrate Your Site From WordPress</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://help.webflow.com/hc/en-us/articles/33961290794771-How-do-I-import-content-into-the-Webflow-CMS"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Webflow: Import Content Into Webflow CMS</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://help.webflow.com/hc/en-us/articles/33961211526291-Import-export-301-redirects"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Webflow: Import and Export 301 Redirects</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Google: Site Moves With URL Changes</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pagespeed.web.dev/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Google PageSpeed Insights</a
+              >
+            </li>
+          </ul>
+          <section class="bottom-cta">
+            <h2 id="need-help-migrating-your-wordpress-website-to-webflow">
+              Need Help Migrating Your WordPress Website to Webflow?
+            </h2>
+            <p>
+              At <strong>Made by Olayinka</strong>, I specialize in Webflow,
+              Framer, WordPress and custom website development.
+            </p>
+            <p>
+              Whether you're migrating an existing WordPress website, rebuilding
+              your marketing pages, transferring CMS content or redesigning your
+              entire online presence, I can help you plan and execute the
+              migration.
+            </p>
+            <p>
+              From responsive development and CMS configuration to SEO
+              redirects, integrations and launch testing, the goal is to create
+              a modern website that supports your business without overlooking
+              the technical details.
+            </p>
+            <p><strong>Ready to move your website to Webflow?</strong></p>
+            <p>
+              <a href="https://madebyolayinka.com/contact.html"
+                >Discuss Your Migration Project</a
+              >
+            </p>
+          </section>
+        </article>
+        <aside aria-label="Article navigation and services" class="sidebar">
+          <nav aria-label="Table of contents" class="toc">
+            <h2>In this article</h2>
+            <a class="toc-link" href="#1-why-migrate-from-wordpress-to-webflow"
+              >1. Why Migrate From WordPress to Webflow?</a
+            ><a
+              class="toc-link"
+              href="#2-wordpress-to-webflow-migration-checklist"
+              >2. WordPress to Webflow Migration Checklist</a
+            ><a
+              class="toc-link"
+              href="#3-step-1-audit-your-existing-wordpress-website"
+              >3. Step 1: Audit Your Existing WordPress Website</a
+            ><a class="toc-link" href="#4-step-2-back-up-your-wordpress-website"
+              >4. Step 2: Back Up Your WordPress Website</a
+            ><a
+              class="toc-link"
+              href="#5-step-3-export-wordpress-content-to-csv"
+              >5. Step 3: Export WordPress Content to CSV</a
+            ><a
+              class="toc-link"
+              href="#6-step-4-plan-your-webflow-cms-architecture"
+              >6. Step 4: Plan Your Webflow CMS Architecture</a
+            ><a
+              class="toc-link"
+              href="#7-step-5-rebuild-your-website-in-webflow"
+              >7. Step 5: Rebuild Your Website in Webflow</a
+            ><a
+              class="toc-link"
+              href="#8-step-6-import-wordpress-content-into-webflow-cms"
+              >8. Step 6: Import WordPress Content Into Webflow CMS</a
+            ><a class="toc-link" href="#9-step-7-migrate-images-and-media"
+              >9. Step 7: Migrate Images and Media</a
+            ><a
+              class="toc-link"
+              href="#10-step-8-preserve-your-seo-with-proper-url-mapping"
+              >10. Step 8: Preserve Your SEO With Proper URL Mapping</a
+            ><a
+              class="toc-link"
+              href="#11-step-9-transfer-seo-metadata-and-structured-data"
+              >11. Step 9: Transfer SEO Metadata and Structured Data</a
+            ><a
+              class="toc-link"
+              href="#12-step-10-reconnect-forms-crm-and-marketing-integrations"
+              >12. Step 10: Reconnect Forms, CRM and Marketing Integrations</a
+            ><a
+              class="toc-link"
+              href="#13-step-11-test-your-webflow-website-before-launch"
+              >13. Step 11: Test Your Webflow Website Before Launch</a
+            ><a
+              class="toc-link"
+              href="#14-step-12-connect-your-domain-and-launch"
+              >14. Step 12: Connect Your Domain and Launch</a
+            ><a
+              class="toc-link"
+              href="#15-step-13-monitor-your-seo-after-migration"
+              >15. Step 13: Monitor Your SEO After Migration</a
+            ><a
+              class="toc-link"
+              href="#16-common-wordpress-to-webflow-migration-mistakes"
+              >16. Common WordPress to Webflow Migration Mistakes</a
+            ><a
+              class="toc-link"
+              href="#17-how-much-does-a-wordpress-to-webflow-migration-cost"
+              >17. How Much Does a WordPress to Webflow Migration Cost?</a
+            ><a class="toc-link" href="#18-frequently-asked-questions"
+              >18. Frequently Asked Questions</a
+            ><a
+              class="toc-link"
+              href="#final-thoughts-is-moving-from-wordpress-to-webflow-worth-it"
+              >Final Thoughts: Is Moving From WordPress to Webflow Worth It?</a
+            >
+          </nav>
+          <section class="cta">
+            <span class="mini"> WORK WITH ME </span>
+            <h2>Your next website, done right.</h2>
+            <p>
+              Conversion-focused design and development in Webflow, Framer and
+              WordPress.
+            </p>
+            <div class="btn-wrapper center">
+              <a class="primary-btn" href="/contact.html">
+                Contact me
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  height="14"
+                  viewbox="0 0 15 15"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.07524 12.3125L8.88774 7.50001L4.07524 2.68751L5.31249 1.45026L11.3622 7.50001L5.31249 13.5498L4.07524 12.3125Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="container_large">
+        <div class="padding_global">
+          <div class="footer-cta">
+            <h2>
+              Imagine your perfect website.
+              <br />
+              Now let's make it real.
+            </h2>
+            <div class="btn-wrapper center">
+              <a class="primary-btn" href="/contact.html">
+                Hire me today
+                <svg
+                  fill="currentColor"
+                  height="100%"
+                  viewbox="0 0 15 15"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.07524 12.3125L8.88774 7.50001L4.07524 2.68751L5.31249 1.45026L11.3622 7.50001L5.31249 13.5498L4.07524 12.3125Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="foot">
+            <div class="foot-left">
+              <h3>Olayinka Ajelolu</h3>
+              <p>Your search for Webflow freelancer ends here.</p>
+              <div class="socials">
+                <a
+                  href="https://www.linkedin.com/in/designeryinka/"
+                  target="\\\_blank"
+                >
+                  <img alt="" src="../images/linkedin.svg" srcset="" />
+                </a>
+                <a
+                  href="https://www.behance.net/designeryinka"
+                  target="\\\_blank"
+                >
+                  <img
+                    alt=""
+                    src="../images/iconmonstr-behance-1.svg"
+                    srcset=""
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/designer_yinka/"
+                  target="\\\_blank"
+                >
+                  <img
+                    alt=""
+                    src="../images/iconmonstr-instagram-11.svg"
+                    srcset=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="foot-right">
+              <div class="navigation">
+                <p>Navigation</p>
+                <ul class="footer-links">
+                  <li>
+                    <a href="/"> Home </a>
+                  </li>
+                  <li>
+                    <a href="/index.html#work"> Work </a>
+                  </li>
+                  <li>
+                    <a href="/index.html#services"> Services </a>
+                  </li>
+                  <li>
+                    <a href="/index.html#reviews"> Reviews </a>
+                  </li>
+                  <li>
+                    <a href="/contact.html"> Contact </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navigation">
+                <p>Get started</p>
+                <ul class="footer-links">
+                  <li>
+                    <a href="/contact.html"> Start a project </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="copywrite">
+            <p>Copyright © 2026. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
