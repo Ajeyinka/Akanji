@@ -15,6 +15,16 @@ toggleButton.addEventListener("click", () => {
   menuBars.forEach((bar) => bar.classList.toggle("active"));
 });
 
+// Close the menu when any navigation link is clicked.
+navbarLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    toggleButton.classList.remove("active");
+    navbarLinks.classList.remove("active");
+
+    menuBars.forEach((bar) => bar.classList.remove("active"));
+  });
+});
+
 const cards = document.querySelectorAll(".service-card");
 
 function updateCards() {

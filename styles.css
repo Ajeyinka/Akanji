@@ -1104,6 +1104,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #dee9f6;
+  max-width: 100%;
 }
 
 .blog-card h3 {
