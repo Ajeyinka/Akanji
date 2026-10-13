@@ -1361,3 +1361,11 @@ footer {
     font-size: 26px;
   }
 }
+
+.certified-partner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  max-width: 150px;
+}
