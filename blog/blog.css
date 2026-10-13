@@ -1216,3 +1216,7 @@ footer {
     justify-content: center;
   }
 }
+
+.article-hero-imaged {
+  max-width: 100%;
+}
