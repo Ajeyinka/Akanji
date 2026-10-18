@@ -62,7 +62,10 @@ a {
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 *,
 *::before,
 *::after {
@@ -114,7 +117,7 @@ p {
   font-size: var(--fs-p);
   line-height: 1.5;
   text-wrap: pretty;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .eyebrow {
@@ -253,6 +256,7 @@ body {
   border-radius: 100px;
   display: inline-flex;
   align-items: center;
+  font-weight: 400;
   gap: 8px;
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -362,7 +366,7 @@ body {
 }
 
 .nav-list li a {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
 }
 
